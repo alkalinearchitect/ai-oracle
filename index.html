@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Human Architect — AI Oracle for companies & products</title>
+  <meta name="description" content="The AI Oracle that finds the weakness and the strength in your company and your product — then fixes it. Saving you money. Saving you time." />
+  <style>
+    :root, .sw-root {
+      --sw-bg: #08060f;
+      --sw-ink: #f4f1fb;
+      --sw-ink-soft: #9a8fc0;
+      --sw-accent: #7A5CFF;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--sw-bg); }
+    #world { min-height: 100vh; }
+    .ha-word { position: fixed; bottom: 12px; left: 14px; z-index: 50;
+      font: 10px/1.4 -apple-system, system-ui, sans-serif; color: #7a6ca8;
+      background: #140e26cc; border: 1px solid #2a2142; padding: 7px 11px;
+      border-radius: 9px; letter-spacing: .3px; }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+  <div class="ha-word">Human Architect — the AI Oracle. Find the weakness. Find the strength. Fix it. Save money, save time.</div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'Human Architect', href: '#top' },
+      cta: { label: 'Engineer yourself', href: '#top' },
+      hint: 'scroll to fly through',
+      diveScroll: 1.25,
+      connScroll: 0.7,
+      atmosphere: true,
+      nav: true,
+      sections: [
+        {
+          id: 'hero', label: 'The Blind Spot',
+          still: 'assets/hero.jpg',
+          clip: 'assets/vid/hero.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Every company has one',
+          title: 'You are leaking.',
+          body: 'Not from negligence — from absence of sight. Margin drains through channels you never instrumented. The Oracle reads the system the way you cannot, because you are inside it.',
+          tags: ['Margin leak', 'Blind spot', 'No instrument'],
+        },
+        {
+          id: 'ads1', label: 'The Audit',
+          still: 'assets/ads1.jpg',
+          clip: 'assets/vid/ads1.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'The Oracle reads it',
+          title: 'Find the weakness. Find the strength.',
+          body: 'Most auditors only hunt faults. We map both — the fracture that costs you money, and the asset left idle that costs you more. Respect the build: the truth serves the company, not the ego.',
+          tags: ['Forensic audit', 'Weakness', 'Untapped strength'],
+        },
+        {
+          id: 'ads2', label: 'The Diagnosis',
+          still: 'assets/ads2.jpg',
+          clip: 'assets/vid/ads2.mp4',
+          accent: '#C41E3A',
+          eyebrow: 'Signal, not noise',
+          title: 'Weakness costs money.',
+          body: 'A 15% channel tax on every booking. A product gap competitors already own. Strength left unused is the more expensive failure — it is money you already earned, sitting still.',
+          tags: ['Commission leak', 'Gap', 'Idle strength'],
+        },
+        {
+          id: 'ads3', label: 'The Fix',
+          still: 'assets/ads3.jpg',
+          clip: 'assets/vid/ads3.mp4',
+          accent: '#9B7EBD',
+          eyebrow: 'Then we close it',
+          title: 'We do not hand you a report.',
+          body: 'We ship the agentic system that fixes it — direct-booking layer, measurement, the loop that runs itself. No committee. No deck. The gap closes and the saving compounds.',
+          tags: ['Agentic fix', 'No report', 'Compounding'],
+        },
+        {
+          id: 'finale', label: 'Alkaline Awakening',
+          still: 'assets/alkaline-cover.jpg',
+          clip: 'assets/vid/alkaline.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'The proof is the product',
+          title: 'You, the Architect.',
+          body: 'A company rebuilt on evidence: leak closed, strength deployed, rollout run on proof. The work we do for you is the trust you earn. Money saved. Time returned.',
+          tags: [],
+          cta: { primary: { label: 'Run the Oracle on your company', href: '#top' },
+                 secondary: { label: 'See the method', href: '#top' } },
+        },
+      ],
+      // Free seamless connectors (ffmpeg crossfade) — one continuous flight.
+      connectors: [
+        'assets/vid/conn_hero_ads1.mp4',
+        'assets/vid/conn_ads1_ads2.mp4',
+        'assets/vid/conn_ads2_ads3.mp4',
+        'assets/vid/conn_ads3_alkaline.mp4',
+      ],
+    });
+  </script>
+</body>
+</html>
